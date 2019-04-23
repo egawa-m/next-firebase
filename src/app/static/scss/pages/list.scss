@@ -1,0 +1,49 @@
+.title {
+  font-family: "Arial";
+}
+
+.list {
+  padding: 0;
+  @include clearfix();
+  > li {
+    list-style: none;
+    margin: 5px 0;
+    float: left;
+    width: 50%;
+  }
+  a {
+    text-decoration: none;
+    color: blue;
+    display: flex;
+    align-items: center;
+    &:hover {
+      opacity: 0.6;
+    }
+  }
+}
+
+.thumbnail {
+  flex: 0 0 72px;
+  img {
+    max-width: 100%;
+  }
+}
+
+.text {
+  flex: 0 0 auto;
+  padding-left: 20px;
+}
+
+/* --------------------------------
+ * SP
+ * -------------------------------- */
+ @media only screen and (max-width: #{$sp-width}) {
+
+  .list {
+    > li {
+      float: none;
+      width: auto;
+    }
+  }
+
+}

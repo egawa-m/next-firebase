@@ -1,0 +1,49 @@
+// Sprite background
+@mixin sprite-bg($sprite, $ratio: 1) {
+  $sprite-offset-x: nth($sprite, 3) / $ratio;
+  $sprite-offset-y: nth($sprite, 4) / $ratio;
+  $width : nth( $sprite, 5 ) / $ratio;
+  $height : nth( $sprite, 6 ) / $ratio;
+  $sprite-width : nth( $sprite, 7 ) / $ratio;
+  $sprite-height : nth( $sprite, 8 ) / $ratio;
+  $sprite-image: nth($sprite, 9);
+
+  width: $width;
+  height: $height;
+  background-image: url(#{$sprite-image});
+  background-position: $sprite-offset-x  $sprite-offset-y;
+  background-repeat: no-repeat;
+  background-size: $sprite-width $sprite-height;
+  display: block;
+}
+
+// Clearfix
+@mixin clearfix() {
+  &::after {
+    content: '';
+    display: block;
+    clear: both;
+  }
+}
+
+// Opacity
+@mixin opacity($opacity) {
+  opacity: $opacity;
+  // IE8 filter
+  $opacity-ie: ($opacity * 100);
+  filter: alpha(opacity=$opacity-ie);
+}
+
+// Responsive image
+@mixin img-responsive($display: block) {
+  display: $display;
+  max-width: 100%;
+  height: auto;
+}
+
+// Replace image
+@mixin img-replace() {
+  text-indent: 110%;
+  white-space: nowrap;
+  overflow: hidden;
+}

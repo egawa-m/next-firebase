@@ -1,0 +1,29 @@
+// @charset "UTF-8";
+
+@import "~normalize.css";
+
+html {
+  font-size: 62.5%;
+}
+body {
+  font-size: $fontSizeBase;
+  line-height: $lineHeightBase;
+  font-family: $mainFont;
+}
+
+a {
+  text-decoration: none;
+}
+
+:global .clearfix {
+  @include clearfix();
+}
+
+@keyframes arrow {
+  from {
+    transform: translateY(-5%);
+  }
+  to {
+    transform: translateY(5%);
+  }
+}

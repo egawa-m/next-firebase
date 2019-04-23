@@ -1,0 +1,27 @@
+.footer {
+  background-color: rgba($keyColor, .2);
+  text-align: center;
+}
+
+.copyright {
+  padding: 10px;
+  margin: 0;
+}
+
+.pagetop {
+  padding: 10px;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: $colorWhite;
+  border-radius: 50%;
+  box-shadow: 0px 0px 10px 0px rgba(#000, .2);
+}
+
+.icon {
+  background: url('../../img/pagetop.png') no-repeat 0 0;
+  width: 14px;
+  height: 14px;
+  display: block;
+  // @mixin sprite $pagetop, 1;
+}

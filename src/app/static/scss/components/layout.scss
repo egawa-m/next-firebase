@@ -1,0 +1,15 @@
+.layout {
+  &.fixed {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+  }
+}
+
+.main {
+  max-width: 1120px;
+  min-height: 100vh;
+  padding: 20px;
+  margin: 0 auto;
+}
